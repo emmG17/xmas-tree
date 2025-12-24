@@ -2,11 +2,13 @@ name: Build Christmas Tree Binary
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
     tags:
       - 'v*'
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
